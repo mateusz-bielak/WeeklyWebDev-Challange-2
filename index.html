@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Cahee</title>
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="css/lightbox.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 	<meta name="viewport" content="width=device-width">
@@ -73,33 +74,25 @@
 		</button>
 		</section>
 		<section class="gallery">
-			<h2>Gallery</h2>
-			<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<button type="button" title="Extra photos">View more</button>
+			<h2 class="gallery__header">Gallery</h2>
+			<p class="gallery__text">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<div class="gallery__wrapper"></div>
+			<button class="gallery__btn" type="button" title="Extra photos">View more</button>
 		</section>
 		<section class="subscription">
-			<h2>Subscribe to us</h2>
-			<p>Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-			<input type="email" placeholder="Your email address...">
-			<button type="button" title="Subscribe to us"></button>
-			<img src="" alt="">
+			<h2 class="subscription__header">Subscribe to us</h2>
+			<p class="subscription__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+			<input class="subscription__input" type="email" placeholder="Your email address...">
+			<button class="subscription__btn" type="button" title="Subscribe to us">Subscribe</button>
 		</section>
 		<section class="blog">
-			<h2>Blog</h2>
-			<p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
-			<button type="button" title="Check our blog"></button>
+			<h2 class="blog__header">Blog</h2>
+			<p class="blog__text">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+			<button class="blog__btn" type="button" title="Check our blog">View more</button>
 		</section>
 		<section class="contact">
-			<h2>Contact</h2>
-			<p>For new projects, ideas, business or anything
+			<h2 class="contact__header">Contact</h2>
+			<p class="contact__text">For new projects, ideas, business or anything
 			you'd like to discuss, contact with me!</p>
 			<div>
 				<span>Auskteez Tran</span>
@@ -108,7 +101,7 @@
 			<input type="tel" placeholder="Your phone number...">
 			<input type="text" placeholder="Your message...">
 			<div>
-				<p>
+				<p class="contact__text">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -128,5 +121,8 @@
 		</h3>
 		<span>Made with <span>love</span> by Mateusz Bielak</span>
 	</footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
+	<script src="js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>

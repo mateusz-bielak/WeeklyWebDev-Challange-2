@@ -4,7 +4,7 @@
 	src: URL('../fonts/Pacifico.ttf');
 }
 
-/*Styling part*/
+/*Basic styles*/
 html {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
@@ -98,8 +98,8 @@ html {
 	transform: rotate(-90deg) translateX(-1.25rem);
 }
 
-/*Intro section*/
-.intro {
+/*Sections positioning*/
+.intro, .about, .services, .gallery, .subscription, .blog, .contact {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
@@ -110,107 +110,78 @@ html {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
+	padding: 0 30px;
+}
+/*Section headers*/
+.intro__header, .about__header, .services__header, .gallery__header, .subscription__header, .blog__header, .contact__header {
+	font-size: 4.2rem;
+	font-weight: 900;
+	margin: 60px 0;
+	text-align: center;
+	text-transform: capitalize;
+}
+/*Section paragraphs*/
+.intro__text, .about__text, .services__text, .gallery__text, .subscription__text, .blog__text, .contact__text {
+	margin-bottom: 60px;
+	font-size: 16px;
+	line-height: 27px;
+	text-align: center;
+}
+/*Section buttons*/
+.intro__btn, .services__btn, .gallery__btn, .subscription__btn, .blog__btn {
+	height: 55px;
+	width: 100%;
+	border: none;
+	font-family: Raleway;
+	font-size: 2rem;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+/*Intro section*/
+.intro {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
 	height: 600px;
-	padding: 0 20px;
 	padding-top: 60px;
 	background-image: url(../img/intro-bkg.png);
-	background-position: 30%;
+	background-position: 50% 0%;
 }
 .intro__header {
-	font-size: 4.2rem;
-	font-weight: 900;
+	margin-top: 0;
 	margin-bottom: 17px;
-	text-transform: capitalize;
 }
 .intro__text {
-	font-size: 14px;
-	line-height: 27px;
-	text-align: center;
+	margin-bottom: 0;
 }
 .intro__btn {
-	height: 55px;
 	width: 200px;
 	background: #FF6033;
-	border: none;
 	color: #FFF;
-	font-size: 18px;
 	margin-top: 80px;
-	text-transform: uppercase;
-}
-@media only screen and (min-height : 700px) {
-	.intro {
-		background-size: initial;
-		background-position: 35%;
-	}
 }
 
 /*About us section*/
 .about {
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	height: 700px;
-	padding: 0 40px;
 	background-image: url(../img/about-bkg.png);
-	background-position: center;
-}
-.about__header {
-	font-size: 4.2rem;
-	font-weight: 900;
-	margin-top: 80px;
-	margin-bottom: 100px;
-	text-transform: capitalize;
-}
-.about__text {
-	font-size: 14px;
-	line-height: 27px;
-	text-align: center;
+	background-position: 48%;
 }
 
 /*Services section*/
 .services {
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	height: 700px;
-	padding: 0 20px;
 	background-image: url(../img/services-bkg.png);
 	background-position: 70%;
-}
-.services__header {
-	font-size: 4.2rem;
-	font-weight: 900;
-	margin-top: 80px;
-	margin-bottom: 80px;
-	text-transform: capitalize;
+	padding-bottom: 40px;
 }
 .services__btn {
 	position: relative;
 	height: 80px;
-	width: 280px;
-	background-color: #FFF;
-	border: none;
-	font-family: Raleway;
-	font-size: 1.6rem;
-	font-weight: 700;
 	margin-bottom: 20px;
+	background-color: #FFF;
+	color: #262626;
+	font-weight: 700;
+	text-transform: none;
 }
 .services__wrapper {
 	position: absolute;
@@ -234,3 +205,111 @@ html {
 	-webkit-transform: scale(0.8) translateY(-4px);
 	transform: scale(0.8) translateY(-4px);
 }
+
+/*Gallery section*/
+.gallery {
+	background-color: #FFE92F;
+}
+.gallery__wrapper {
+	width: calc(100% + 60px);
+}
+.gallery__photo {
+	display: block;
+	height: 300px;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+.gallery__btn {
+	width: calc(100% + 60px);
+	background: #5585A2;
+	color: #FFF;
+}
+
+/*Subscription section*/
+.subscription {
+	background-image: url(../img/subscribe-bkg.png);
+	background-position: 56% 80px;
+}
+.subscription__input {
+	height: 55px;
+	width: 100%;
+	padding-left: 10px;
+	border:solid 1px #000;
+	font-size: 1.5rem;
+}
+.subscription__btn {
+	background-color: #96B92C;
+	margin: 30px 0;
+}
+
+/*Blog section*/
+.blog {
+	background-color: #B07CF7;
+}
+.blog__article {
+	position: relative;
+	height: 310px;
+	width: calc(100% + 60px);
+	max-width: 370px;
+	margin-bottom: 20px;
+	background-position: center;
+	background-size: cover;
+}
+.blog__article::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	height: 150px;
+	width: 100%;
+	background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(26,26,26,0)),to(rgb(26,26,26)));
+	background-image: linear-gradient(to bottom,rgba(26,26,26,0),rgb(26,26,26));
+	opacity: 0.7;
+}
+.article__date {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	height: 60px;
+	width: 60px;
+	background-color: rgba(38, 38, 38, 0.5);
+	border-radius: 6px;
+	color: #fff;
+	font-size: 3.2rem;
+	font-weight: 700;
+	text-align: center;
+}
+.article__month {
+	display: block;
+	font-size: 2.1rem;
+	text-transform: uppercase;
+}
+.article__caption {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 20px;
+	color: #fff;
+	font-size: 1.3rem;
+	line-height: 2.5rem;
+}
+.article__paragraph {
+	font-size: 2rem;
+	font-weight: 700;
+}
+.blog__date {
+	
+}
+.blog__btn {
+	margin-bottom: 20px;
+	background-color: #F72B3B;
+	color: #fff;
+}
+
+/*Contact section*/
+.contact {
+	background-image: url(../img/contact-bkg.png);
+	background-position: center;
+	background-size: cover;
+}
+/*Footer*/
