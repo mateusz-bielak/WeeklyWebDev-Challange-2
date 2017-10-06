@@ -77,7 +77,6 @@ html {
 	background: transparent;
 	border: none;
 	border-top: 5px solid #000;
-	outline: none;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 }
@@ -314,6 +313,7 @@ html {
 	background-image: url(../img/contact-bkg.png);
 	background-position: center;
 	background-size: cover;
+	
 }
 .contact__input-header {
 	height: 50px;
@@ -365,6 +365,7 @@ html {
 .contact__data {
 	
 }
+
 /*Footer*/
 .footer {
 	height: 90px;
