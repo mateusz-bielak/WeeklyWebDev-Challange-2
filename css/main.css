@@ -68,6 +68,9 @@ html {
 	list-style-type: none;
 	text-align: center;
 }
+.navbar__link {
+	display: block;
+}
 .header__hamburger {
 	top: 20px;
 	left: calc(100% - 65px);
