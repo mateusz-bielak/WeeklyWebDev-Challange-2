@@ -1,4 +1,8 @@
-//Gallery section
+var header = document.querySelector(".header");
+var hamburger = document.querySelector(".header__hamburger");
+var navbar_list = document.querySelector(".navbar__list");
+var navbar_list_elements = document.querySelectorAll(".navbar__elem");
+
 createGalleryImages ();
 
 function createGalleryImages () {
@@ -27,21 +31,25 @@ function setImageAttributes (container, elementSource, element) {
 	element.classList.add("gallery__photo");
 }
 
-//Blog section
+
 createBlogArticles ();
 
 function createBlogArticles () {
-	var articleReferenceElement = document.querySelector(".blog__btn");
-	var articleParent = document.querySelector(".blog");
-	for (var i = 1; i <4; i++) {
-		articleParent.insertBefore(createBlogContainers (i), articleReferenceElement);
+	//Var's for insertBefore method
+	var article_reference_element = document.querySelector(".blog__btn");
+	var article_parent = document.querySelector(".blog");
+	var how_many_articles = "3"; //Amount of showing articles
+	
+	for (var i = 1; i <= how_many_articles; i++) {
+		article_parent.insertBefore(createBlogContainers (i), article_reference_element);
 	}
 	
-	var article = document.querySelectorAll(".blog__article");
+	var article = document.querySelectorAll(".blog__article");//Array of article containers
 	var author = "Auskteez";
 	var publication_time = "2 hours ago";
 	var article_names = ["Green Smoothies: Too Much of a Good Thing?", "Growing Food and a “Thirst” for Innovation", "Pesticides & Food: What You Need to Know"];
-	for (var i = 0; i < article.length; i++) {
+	
+	for (var i = 0; i < how_many_articles; i++) {
 		article[i].appendChild(createArticleDate ());
 		article[i].appendChild(createArticleCaptions (author, publication_time, article_names[i]));
 	}
@@ -88,4 +96,20 @@ function createArticleCaptions (name, time, article) {
 	container.appendChild(paragraph);
 	container.appendChild(author);
 	return container;
+}
+
+hamburger.addEventListener("click", function () {
+	toggleNavbar ();
+});
+
+for (var i = 0; i < navbar_list_elements.length; i++) {
+	navbar_list_elements[i].addEventListener("click", function () {
+		toggleNavbar ();
+	})
+}
+
+function toggleNavbar () {
+	hamburger.classList.toggle("header__hamburger--active");
+	navbar_list.classList.toggle("navbar__list--active");
+	header.classList.toggle("header--active");
 }
