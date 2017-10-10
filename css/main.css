@@ -316,10 +316,13 @@ html {
   background-color: #B07CF7;
 }
 
+.blog__container {
+  width: calc(100% + 60px);
+}
+
 .blog__article {
   position: relative;
   height: 310px;
-  width: calc(100% + 60px);
   background-position: center;
   background-size: cover;
 }
