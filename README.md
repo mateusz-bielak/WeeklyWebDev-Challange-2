@@ -7,5 +7,3 @@ That project is going to get updates in the future. Now I'm busy with learning R
 * additional breakpoints for more devices
 * "sticky" navbar with link underlines
 * general code refactor
-
-https://butseriously.github.io/WeeklyWebDev-Challange-2/
